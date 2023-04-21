@@ -139,6 +139,7 @@ li {
 
 .two {
     margin-top: 30px;
+    // height: 100vh;
 
     two_left_col {
         width: 50vw;
@@ -146,6 +147,7 @@ li {
 
     two_right_col {
         width: 50vw;
+        font-size: 10vw;
     }
 
     h4 {
@@ -585,79 +587,123 @@ li {
 // ===============================footer================================= 
 
 // =============================Range Labels=========================
-
-
-@mixin rangeThumb {
-    width: 18px;
-    height: 18px;
-    margin: -8px 0 0;
-    border-radius: 50%;
-    background: #37adbf;
-    cursor: pointer;
-    border: 0 !important;
-}
-
-@mixin rangeTrack {
-    width: 100%;
-    height: 2px;
-    cursor: pointer;
-    background: #b2b2b2;
-}
-
-.range {
-    position: relative;
-    width: 550px;
-    height: 5px;
-}
-
-.range input {
-    width: 100%;
-    position: absolute;
-    top: 2px;
-    height: 0;
-    -webkit-appearance: none;
-
-    // Thumb
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none; // needed again for Chrome & Safari
-        @include rangeThumb;
-    }
-
-    &::-moz-range-thumb {
-        @include rangeThumb;
-    }
-
-    &::-ms-thumb {
-        @include rangeThumb;
-    }
-
-    // Track
-    &::-webkit-slider-runnable-track {
-        @include rangeTrack;
-    }
-
-    &::-moz-range-track {
-        @include rangeTrack;
-    }
-
-    &::-ms-track {
-        @include rangeTrack;
-    }
-
-    &:focus {
-        // override outline/background on focus
-        background: none;
-        outline: none;
-    }
-
-    &::-ms-track {
-        // A little somethin' somethin' for IE
-        width: 100%;
+.select_size {
+    
+        padding: 100px;
+        
+      
+      @mixin rangeThumb {
+        width: 18px;
+        height: 18px;
+        margin: -8px 0  0;
+        border-radius: 50%;
+        background: #37adbf;
         cursor: pointer;
-        background: transparent;
-        border-color: transparent;
-        color: transparent;
-    }
+        border: 0 !important;
+      }
+      
+      @mixin rangeTrack {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+        background: #b2b2b2;
+      }
+      
+      .range {
+        position: relative;
+        width: 550px;
+        height: 5px;
+      }
+      
+      .range input {
+        width: 100%;
+        position: absolute;
+        top: 2px;
+        height: 0;
+        -webkit-appearance: none;
+      
+        // Thumb
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none; // needed again for Chrome & Safari
+          @include rangeThumb;
+        }
+      
+        &::-moz-range-thumb {
+          @include rangeThumb;
+        }
+      
+        &::-ms-thumb {
+          @include rangeThumb;
+        }
+      
+        // Track
+        &::-webkit-slider-runnable-track {
+          @include rangeTrack;
+        }
+      
+        &::-moz-range-track {
+          @include rangeTrack;
+        }
+      
+        &::-ms-track {
+          @include rangeTrack;
+        }
+      
+        &:focus { // override outline/background on focus
+          background: none;
+          outline: none;
+        }
+      
+        &::-ms-track { // A little somethin' somethin' for IE
+          width: 100%;
+          cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          color: transparent;
+        }
+      }
+      
+      // Labels below slider
+      .range-labels {
+        margin: 18px -41px 0;
+        padding: 0;
+        list-style: none;
+        
+        li {
+          position: relative;
+          float: left;
+          width: 90.25px;
+          text-align: center;
+          color: #b2b2b2;
+          font-size: 14px;
+          cursor: pointer;
+          
+          &::before {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            left: 0;
+            content: "";
+            margin: 0 auto;
+            width: 9px;
+            height: 9px;
+            background: #b2b2b2;
+            border-radius: 50%;
+          }
+        }
+        
+        .active {
+          color: #37adbf;
+        }
+        
+        .selected::before {
+          background: #37adbf;
+        }
+        
+        .active.selected::before {
+          display: none;
+        }
+      }
 }
 
 // Labels below slider
@@ -720,6 +766,7 @@ li {
 .five {
     background: #fb02b9cd;
 
+    // height: 25vh;
     .container1 {
         width: 50vw;
         display: flex;
@@ -876,6 +923,17 @@ li {
         }
     }
 
+    // .two{
+    //     .img{
+    //         &:hover {
+    //             transform: scale(1.1);
+    //             -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //             -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //             box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //         }
+    //     }
+    // }
+
     .review_rate {
         font-size: 4.5vw;
     }
@@ -895,19 +953,22 @@ li {
 
     .home {
         height: 50vh;
-        h3{
+
+        .container1 {
+            height: 50vh;
+        }
+        h3 {
             font-size: 4vw;
         }
     }
+
     .hero {
         .parallax-text {
             font-size: 25vw;
         }
     }
 
-    .container1 {
-        height: 50vh;
-    }
+    
 
     .hero {
         height: 50vh;
@@ -926,13 +987,26 @@ li {
             height: 15vh;
         }
     }
+
     .gallery_review_section {
         .shoe_gallery {
             .shoe_gallery_left {
                 width: 40vw;
-                margin-left: 7px;
+                margin-left: 14px;
                 margin-top: -11vw;
             }
         }
     }
+}
+
+@media screen and (min-width:420px)and (max-width:576px) {
+    .five {
+        height: 18vh;
+    }
+}
+
+
+.radiobtn{
+    display: flex;
+    justify-content: space-around;
 }

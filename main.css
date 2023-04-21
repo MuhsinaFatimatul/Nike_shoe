@@ -109,6 +109,7 @@ li {
 }
 .two two_right_col {
   width: 50vw;
+  font-size: 10vw;
 }
 .two h4 {
   color: rgb(152, 216, 248);
@@ -269,20 +270,22 @@ li {
     font-size: 20px;
   }
 }
-.range {
+.select_size {
+  padding: 100px;
+}
+.select_size .range {
   position: relative;
   width: 550px;
   height: 5px;
 }
-
-.range input {
+.select_size .range input {
   width: 100%;
   position: absolute;
   top: 2px;
   height: 0;
   -webkit-appearance: none;
 }
-.range input::-webkit-slider-thumb {
+.select_size .range input::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 18px;
   height: 18px;
@@ -292,7 +295,7 @@ li {
   cursor: pointer;
   border: 0 !important;
 }
-.range input::-moz-range-thumb {
+.select_size .range input::-moz-range-thumb {
   width: 18px;
   height: 18px;
   margin: -8px 0 0;
@@ -301,7 +304,7 @@ li {
   cursor: pointer;
   border: 0 !important;
 }
-.range input::-ms-thumb {
+.select_size .range input::-ms-thumb {
   width: 18px;
   height: 18px;
   margin: -8px 0 0;
@@ -310,34 +313,69 @@ li {
   cursor: pointer;
   border: 0 !important;
 }
-.range input::-webkit-slider-runnable-track {
+.select_size .range input::-webkit-slider-runnable-track {
   width: 100%;
   height: 2px;
   cursor: pointer;
   background: #b2b2b2;
 }
-.range input::-moz-range-track {
+.select_size .range input::-moz-range-track {
   width: 100%;
   height: 2px;
   cursor: pointer;
   background: #b2b2b2;
 }
-.range input::-ms-track {
+.select_size .range input::-ms-track {
   width: 100%;
   height: 2px;
   cursor: pointer;
   background: #b2b2b2;
 }
-.range input:focus {
+.select_size .range input:focus {
   background: none;
   outline: none;
 }
-.range input::-ms-track {
+.select_size .range input::-ms-track {
   width: 100%;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
+}
+.select_size .range-labels {
+  margin: 18px -41px 0;
+  padding: 0;
+  list-style: none;
+}
+.select_size .range-labels li {
+  position: relative;
+  float: left;
+  width: 90.25px;
+  text-align: center;
+  color: #b2b2b2;
+  font-size: 14px;
+  cursor: pointer;
+}
+.select_size .range-labels li::before {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  left: 0;
+  content: "";
+  margin: 0 auto;
+  width: 9px;
+  height: 9px;
+  background: #b2b2b2;
+  border-radius: 50%;
+}
+.select_size .range-labels .active {
+  color: #37adbf;
+}
+.select_size .range-labels .selected::before {
+  background: #37adbf;
+}
+.select_size .range-labels .active.selected::before {
+  display: none;
 }
 
 .range-labels {
@@ -517,14 +555,14 @@ li {
   .home {
     height: 50vh;
   }
+  .home .container1 {
+    height: 50vh;
+  }
   .home h3 {
     font-size: 4vw;
   }
   .hero .parallax-text {
     font-size: 25vw;
-  }
-  .container1 {
-    height: 50vh;
   }
   .hero {
     height: 50vh;
@@ -540,7 +578,16 @@ li {
   }
   .gallery_review_section .shoe_gallery .shoe_gallery_left {
     width: 40vw;
-    margin-left: 7px;
+    margin-left: 14px;
     margin-top: -11vw;
   }
+}
+@media screen and (min-width: 420px) and (max-width: 576px) {
+  .five {
+    height: 18vh;
+  }
+}
+.radiobtn {
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */
