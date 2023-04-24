@@ -95,32 +95,37 @@
                 </div>
             </div>
 
-            <div class=" two_right_col col-12 col-lg-6">
-                <div class="container m-0">
+            <div class=" two_right_col col-12 col-lg-6 ">
+                <div class="container  m-0">
                     <div class="row ">
                         <h4 class="text-center text-dark mt-4 fw-bold  ">SIZECHART</h4>
                     </div>
-                    <div class="container radiobtn d-flex">
+                    <div class="container radiobtn text-center mt-5">
                         <div class="form-check form-check-inline px-2">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
                             <label class="form-check-label" for="inlineRadio1">36</label>
-                          </div>
-                          <div class="form-check form-check-inline px-2">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">37</label>
-                          </div>
+                        </div>
                         <div class="form-check form-check-inline px-2">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">37</label>
+                        </div>
+                        <div class="form-check form-check-inline px-2">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
                             <label class="form-check-label" for="inlineRadio1">38</label>
-                          </div>
-                          <div class="form-check form-check-inline px-2">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        </div>
+                        <div class="form-check form-check-inline px-2">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
                             <label class="form-check-label" for="inlineRadio2">39</label>
-                          </div>
-                          <div class="form-check form-check-inline px-2">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        </div>
+                        <div class="form-check form-check-inline px-2">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
                             <label class="form-check-label" for="inlineRadio2">40</label>
-                          </div>
+                        </div>
                     </div>
 
                     <div class="container table-responsive py-5 d-flex align-items-center justify-content-center">
@@ -162,9 +167,11 @@
                         </table>
                     </div>
 
-                    <div class="shoes-info">
-                        <div class="shoes-price text-center">$90</div>
+                    <div class="shoes-info text-center">
+                        
+                        <div class="shoes-price text-center mb-4"> MRP : $195</div>
                         <!-- <a href="#" class="shoes-button">ADD TO CART</a> -->
+                        <a href="https://www.nike.com/in/t/dunk-high-retro-shoe-DdRmMZ/DD1399-105" class=""><button type="button " class="btn btn-primary buynow">Buy now</button></a>
                     </div>
 
                 </div>
@@ -294,24 +301,24 @@
             <div class=" shoe_gallery_left row py-3 shadow-5">
                 <div class="col-12 mb-1">
                     <div class="lightbox">
-                        <img src="./images/shoe6.webp" alt="White blouse"
-                            class="ecommerce-gallery-main-img active w-100" />
+                        <img src="./images/shoe2.webp" alt="White blouse"
+                            class="ecommerce-gallery-main-img active w-100" id="change" />
                     </div>
                 </div>
                 <div class="col-3 mt-1">
                     <img src="./images/shoe2.webp" data-mdb-img="./images/shoe2.webp" alt="White blouse"
-                        class="active w-100" />
+                        class="active w-100" onclick="changeColor(this.id)" id="shoe2"/>
                 </div>
                 <div class="col-3 mt-1">
                     <img src="./images/shoe6.webp" data-mdb-img="./images/shoe6.webp" alt="Blue Jeans Jacket"
-                        class="w-100" />
+                        class="w-100" onclick="changeColor(this.id)" id="shoe6"/>
                 </div>
                 <div class="col-3 mt-1">
                     <img src="./images/shoe7.webp" data-mdb-img="./images/shoe7.webp" alt="Red Sweatshirt"
-                        class="w-100" />
+                        class="w-100" onClick="changeColor(this.id)" id="shoe7"/>
                 </div>
                 <div class="col-3 mt-1">
-                    <img src="./images/shoe8.webp" data-mdb-img="./images/shoe8.webp" alt="Black Shirt" class="w-100" />
+                    <img src="./images/shoe8.webp" data-mdb-img="./images/shoe8.webp" alt="Black Shirt" class="w-100" onClick="changeColor(this.id)" id="shoe8" />
                 </div>
             </div>
 
@@ -374,7 +381,11 @@
     </footer>
 
 
-
+<script>let image = document.querySelector("#change");
+    function changeColor(filename) {
+        image.setAttribute("src", "./images/" + filename + ".webp");
+    }
+    </script>
 
 
 

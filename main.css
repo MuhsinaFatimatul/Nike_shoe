@@ -590,4 +590,37 @@ li {
 .radiobtn {
   display: flex;
   justify-content: space-around;
+}
+
+.shoes-price {
+  font-weight: bold;
+}
+.shoes-price .buynow {
+  font-size: 2vw;
+}
+
+@media screen and (min-width: 1300px) {
+  .shoes-price {
+    font-size: 3vw;
+  }
+  .buynow {
+    font-size: 3vw;
+  }
+  .two_right_col .radiobtn {
+    margin-top: 5vw;
+    font-size: 2vw;
+  }
+  .two_right_col table {
+    font-size: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+  .three .calculate_section {
+    margin-left: -16vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  s_r {
+    margin-bottom: 3vw;
+  }
 }/*# sourceMappingURL=main.css.map */

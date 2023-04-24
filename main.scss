@@ -588,122 +588,124 @@ li {
 
 // =============================Range Labels=========================
 .select_size {
-    
-        padding: 100px;
-        
-      
-      @mixin rangeThumb {
+
+    padding: 100px;
+
+
+    @mixin rangeThumb {
         width: 18px;
         height: 18px;
-        margin: -8px 0  0;
+        margin: -8px 0 0;
         border-radius: 50%;
         background: #37adbf;
         cursor: pointer;
         border: 0 !important;
-      }
-      
-      @mixin rangeTrack {
+    }
+
+    @mixin rangeTrack {
         width: 100%;
         height: 2px;
         cursor: pointer;
         background: #b2b2b2;
-      }
-      
-      .range {
+    }
+
+    .range {
         position: relative;
         width: 550px;
         height: 5px;
-      }
-      
-      .range input {
+    }
+
+    .range input {
         width: 100%;
         position: absolute;
         top: 2px;
         height: 0;
         -webkit-appearance: none;
-      
+
         // Thumb
         &::-webkit-slider-thumb {
-          -webkit-appearance: none; // needed again for Chrome & Safari
-          @include rangeThumb;
+            -webkit-appearance: none; // needed again for Chrome & Safari
+            @include rangeThumb;
         }
-      
+
         &::-moz-range-thumb {
-          @include rangeThumb;
+            @include rangeThumb;
         }
-      
+
         &::-ms-thumb {
-          @include rangeThumb;
+            @include rangeThumb;
         }
-      
+
         // Track
         &::-webkit-slider-runnable-track {
-          @include rangeTrack;
+            @include rangeTrack;
         }
-      
+
         &::-moz-range-track {
-          @include rangeTrack;
+            @include rangeTrack;
         }
-      
+
         &::-ms-track {
-          @include rangeTrack;
+            @include rangeTrack;
         }
-      
-        &:focus { // override outline/background on focus
-          background: none;
-          outline: none;
+
+        &:focus {
+            // override outline/background on focus
+            background: none;
+            outline: none;
         }
-      
-        &::-ms-track { // A little somethin' somethin' for IE
-          width: 100%;
-          cursor: pointer;
-          background: transparent;
-          border-color: transparent;
-          color: transparent;
+
+        &::-ms-track {
+            // A little somethin' somethin' for IE
+            width: 100%;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
         }
-      }
-      
-      // Labels below slider
-      .range-labels {
+    }
+
+    // Labels below slider
+    .range-labels {
         margin: 18px -41px 0;
         padding: 0;
         list-style: none;
-        
+
         li {
-          position: relative;
-          float: left;
-          width: 90.25px;
-          text-align: center;
-          color: #b2b2b2;
-          font-size: 14px;
-          cursor: pointer;
-          
-          &::before {
-            position: absolute;
-            top: -25px;
-            right: 0;
-            left: 0;
-            content: "";
-            margin: 0 auto;
-            width: 9px;
-            height: 9px;
-            background: #b2b2b2;
-            border-radius: 50%;
-          }
+            position: relative;
+            float: left;
+            width: 90.25px;
+            text-align: center;
+            color: #b2b2b2;
+            font-size: 14px;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                top: -25px;
+                right: 0;
+                left: 0;
+                content: "";
+                margin: 0 auto;
+                width: 9px;
+                height: 9px;
+                background: #b2b2b2;
+                border-radius: 50%;
+            }
         }
-        
+
         .active {
-          color: #37adbf;
+            color: #37adbf;
         }
-        
+
         .selected::before {
-          background: #37adbf;
+            background: #37adbf;
         }
-        
+
         .active.selected::before {
-          display: none;
+            display: none;
         }
-      }
+    }
 }
 
 // Labels below slider
@@ -957,6 +959,7 @@ li {
         .container1 {
             height: 50vh;
         }
+
         h3 {
             font-size: 4vw;
         }
@@ -968,7 +971,7 @@ li {
         }
     }
 
-    
+
 
     .hero {
         height: 50vh;
@@ -1006,7 +1009,56 @@ li {
 }
 
 
-.radiobtn{
+.radiobtn {
     display: flex;
     justify-content: space-around;
+}
+
+.shoes-price {
+    // font-size: 5vw;
+    font-weight: bold;
+
+    .buynow {
+
+        font-size: 2vw;
+
+    }
+
+    // a{
+    //     margin-top: 10px;
+    // }
+}
+
+@media screen and (min-width:1300px) {
+    .shoes-price {
+        font-size: 3vw;
+    }
+
+    .buynow {
+        font-size: 3vw;
+    }
+
+    .two_right_col {
+        .radiobtn {
+            margin-top: 5vw;
+            font-size: 2vw;
+        }
+
+        table {
+            font-size: 2vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+    }
+
+    .three {
+        .calculate_section {
+            margin-left: -16vw;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    s_r{
+        margin-bottom: 3vw;
+    }
 }
