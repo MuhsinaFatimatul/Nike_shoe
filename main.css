@@ -623,4 +623,9 @@ li {
   s_r {
     margin-bottom: 3vw;
   }
+}
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+    padding-left: 2vw;
+  }
 }/*# sourceMappingURL=main.css.map */
