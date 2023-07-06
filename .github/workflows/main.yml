@@ -21,4 +21,4 @@ jobs:
         aws-region: us-east-1
         
     - name: Deploy static website on AWS S3
-      run: aws s3 sync . s3://nike-shoe --delete
+      run: aws s3 sync . s3://nike-shoes --delete
